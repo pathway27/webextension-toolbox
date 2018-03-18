@@ -101,6 +101,12 @@ module.exports = function webpackConfig ({
     }
   })
 
+  config.module.rules.push({
+    test: /\.vue$/,
+    exclude: /node_modules/,
+    loader: 'vue-loader'
+  })
+
   /******************************/
   /*     WEBPACK.PLUGINS        */
   /******************************/
